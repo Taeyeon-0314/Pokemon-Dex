@@ -1,8 +1,9 @@
-# React + Vite
+## Git Commit Message Type
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- feat : 새로운 기능 추가 또는 요구 사항을 충족하기 위해 기존 기능을 수정
+- fix : 기능과 관련된 버그 수정
+- build : 빌드 과정과 관련된 변경 사항
+- chore : 패키지 매니저 또는 기타 잡다한 변경 사항
+- docs : 문서나 주석을 수정
+- style : 코드 스타일과 포매팅 관련 변경 사항
+- refactor : 기능에 영향을 주지 않는 코드 리팩토링(ex 변수명 변경)
