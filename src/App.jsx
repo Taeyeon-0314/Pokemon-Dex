@@ -5,7 +5,7 @@ import PokemonDetail from "./components/PokemonDetail";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
         {/* 포켓몬도감과 디테일 페이지 추가 */}
