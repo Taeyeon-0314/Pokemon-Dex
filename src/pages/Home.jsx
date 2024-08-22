@@ -8,7 +8,7 @@ const StDevBtn = styled.button`
   width: 200px;
   height: 50px;
   font-size: 20px;
-  font-family: bold;
+  font-weight: bold;
   color: white;
   cursor: pointer;
   border: none;
@@ -16,6 +16,8 @@ const StDevBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
 `;
 
 const StImg = styled.img`
@@ -23,6 +25,13 @@ const StImg = styled.img`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const StSubImg = styled.img`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
 `;
 
 const StMainDiv = styled.div`
@@ -42,6 +51,7 @@ function Home() {
       <GlobalStyle />
       <StMainDiv>
         <StImg src="/mainPokemon.png" alt="" />
+        <StSubImg src="/뮤.png" alt="" />
         <StDevBtn onClick={() => navigate("/dex")}>
           포켓몬 도감 시작하기
         </StDevBtn>
