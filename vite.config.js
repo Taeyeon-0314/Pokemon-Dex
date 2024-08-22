@@ -5,5 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/Pokemon-Dex/', // 여기에는 GitHub Pages에서 사용되는 저장소 이름을 넣어줘
-
+  define: {
+    'process.env.PUBLIC_URL': JSON.stringify('/Pokemon-Dex/'),
+  },
 })

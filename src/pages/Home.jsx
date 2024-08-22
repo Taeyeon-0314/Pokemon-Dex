@@ -50,8 +50,8 @@ function Home() {
     <>
       <GlobalStyle />
       <StMainDiv>
-        <StImg src="/mainPokemon.png" alt="" />
-        <StSubImg src="/뮤.png" alt="" />
+        <StImg src={`${process.env.PUBLIC_URL}/mainPokemon.png`} alt="" />
+        <StSubImg src={`${process.env.PUBLIC_URL}/뮤.png`} alt="" />
         <StDevBtn onClick={() => navigate("/dex")}>
           포켓몬 도감 시작하기
         </StDevBtn>

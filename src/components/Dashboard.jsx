@@ -100,7 +100,10 @@ const Dashboard = ({ selectedPokemon, onRemovePokemon }) => {
         ))}
         {[...Array(emptySlots)].map((_, index) => (
           <StPockeGroupImgDiv key={index}>
-            <StPockeImg src="/pokeball.png" alt="포켓볼" />
+            <StPockeImg
+              src={`${process.env.PUBLIC_URL}/pokeball.png`}
+              alt="포켓볼"
+            />
           </StPockeGroupImgDiv>
         ))}
       </StPockeGroupDiv>
