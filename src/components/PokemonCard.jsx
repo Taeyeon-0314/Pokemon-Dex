@@ -10,6 +10,18 @@ const Card = styled.div`
   text-align: center;
   padding: 10px;
   cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+  }
+`;
+
+const StCardDiv = styled.div`
+  cursor: default;
+  &:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+  }
 `;
 
 const Button = styled.button`
@@ -43,11 +55,15 @@ function PokemonCard({ pokemon, onAdd, isSelected }) {
   };
 
   return (
-    <Card onClick={() => navigate(`/pokemon-detail?id=${pokemon.id}`)}>
-      <img src={pokemon.img_url} alt={pokemon.korean_name} />
-      <p>{pokemon.korean_name}</p>
-      <StIdPTag>{`No. ${pokemon.id.toString().padStart(3, "0")}`}</StIdPTag>
-      <Button onClick={handleAddClick}>추가</Button>
+    <Card>
+      <div onClick={() => navigate(`/pokemon-detail?id=${pokemon.id}`)}>
+        <img src={pokemon.img_url} alt={pokemon.korean_name} />
+        <p>{pokemon.korean_name}</p>
+        <StIdPTag>{`No. ${pokemon.id.toString().padStart(3, "0")}`}</StIdPTag>
+      </div>
+      <StCardDiv>
+        <Button onClick={handleAddClick}>추가</Button>
+      </StCardDiv>
     </Card>
   );
 }
