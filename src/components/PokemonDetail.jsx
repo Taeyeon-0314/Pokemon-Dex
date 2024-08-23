@@ -51,11 +51,9 @@ function PokemonDetail() {
 
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const pokemonId = Number(queryParams.get("id")); // 포켓몬 ID 를 쿼리스트링으로부터 받아옵시다.
-  //   console.log(pokemonId);
+  const pokemonId = Number(queryParams.get("id"));
 
   const pokemon = MOCK_DATA.find((p) => p.id === pokemonId);
-  //   console.log(pokemon);
 
   if (!pokemon) {
     return <div>포켓몬을 찾을 수 없습니다.</div>;

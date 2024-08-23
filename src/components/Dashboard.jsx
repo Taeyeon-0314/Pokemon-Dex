@@ -1,15 +1,24 @@
 import { styled } from "styled-components";
 
 const DashboardContainer = styled.div`
-  width: 1163px;
-  height: ${(props) => (props.selectedPokemonWidth ? "250px" : "180px")};
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   background-color: rgb(248, 248, 248);
   margin-bottom: 20px;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+  }
 `;
 
 const StMyPockemonH2 = styled.h2`
@@ -17,6 +26,14 @@ const StMyPockemonH2 = styled.h2`
   font-weight: bold;
   margin-bottom: 20px;
   color: red;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
 `;
 
 const StPockeGroupDiv = styled.div`
@@ -25,6 +42,14 @@ const StPockeGroupDiv = styled.div`
   gap: 10px;
   width: 100%;
   justify-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const StPockeGroupImgDiv = styled.div`
@@ -55,7 +80,6 @@ const StSelectPockmonItem = styled.div`
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
   text-align: center;
   padding: 10px;
-  cursor: pointer;
 `;
 
 const Button = styled.button`
@@ -67,6 +91,11 @@ const Button = styled.button`
   background-color: red;
   color: white;
   border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+  }
 `;
 
 const StIdPTag = styled.p`

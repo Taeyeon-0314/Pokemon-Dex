@@ -16,6 +16,19 @@ const Card = styled.div`
     transform: scale(1.2);
     transition-duration: 0.5s;
   }
+  @media (max-width: 768px) {
+    padding: 8px;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 5px;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 `;
 
 const StCardDiv = styled.div`
@@ -41,6 +54,16 @@ const StIdPTag = styled.p`
   font-size: 12px;
   color: rgb(102, 102, 102);
   padding-top: 15px;
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+    padding-top: 10px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 8px;
+    padding-top: 5px;
+  }
 `;
 
 function PokemonCard({ pokemon, onAdd, isSelected }) {
@@ -49,10 +72,8 @@ function PokemonCard({ pokemon, onAdd, isSelected }) {
     e.stopPropagation();
 
     if (isSelected) {
-      // alert("이미 추가한 포켓몬입니다!");
       Swal.fire({
         icon: "error",
-        // title: "Error",
         html: '<div style="font-size: 30px;">이미 추가한 포켓몬입니다!</div>',
       });
     } else {

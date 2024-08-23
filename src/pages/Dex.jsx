@@ -15,6 +15,14 @@ const StDexMain = styled.main`
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+  @media (max-width: 768px) {
+    padding: 15px;
+    min-height: auto;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+  }
 `;
 
 function Dex() {
