@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { styled } from "styled-components";
 import PokemonList from "../components/PokemonList";
 import MOCK_DATA from "../mock";
 import Dashboard from "../components/Dashboard";
+import { usePokemon } from "../context/PokemonProvider";
 
 const StDexMain = styled.main`
   background-color: #ffc6c6d4;
@@ -18,23 +18,7 @@ const StDexMain = styled.main`
 `;
 
 function Dex() {
-  const [selectedPokemon, setSelectedPokemon] = useState([]);
-
-  const addPokemon = (pokemon) => {
-    if (selectedPokemon.length >= 6) {
-      alert("최대 6개의 포켓몬만 선택할 수 있습니다.");
-      return;
-    }
-    if (!selectedPokemon.some((p) => p.id === pokemon.id)) {
-      setSelectedPokemon((prevSelected) => [...prevSelected, pokemon]);
-    }
-  };
-
-  const removePokemon = (pokemon) => {
-    setSelectedPokemon((prevSelected) =>
-      prevSelected.filter((p) => p.id !== pokemon.id)
-    );
-  };
+  const { selectedPokemon, addPokemon, removePokemon } = usePokemon();
 
   return (
     <StDexMain>
