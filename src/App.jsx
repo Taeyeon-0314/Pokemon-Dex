@@ -7,7 +7,8 @@ import { PokemonProvider } from "./context/PokemonProvider";
 function App() {
   return (
     <PokemonProvider>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
+        {/* <Router basename={process.env.PUBLIC_URL}> */}
         <Routes>
           <Route path="/" element={<Home />} />
           {/* 포켓몬도감과 디테일 페이지 추가 */}
