@@ -1,5 +1,7 @@
 import { styled } from "styled-components";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/dist/sweetalert2.min.css";
 
 const Card = styled.div`
   border: 1px solid rgb(221, 221, 221);
@@ -43,12 +45,16 @@ const StIdPTag = styled.p`
 
 function PokemonCard({ pokemon, onAdd, isSelected }) {
   const navigate = useNavigate();
-
   const handleAddClick = (e) => {
     e.stopPropagation();
 
     if (isSelected) {
-      alert("이미 추가한 포켓몬입니다!");
+      // alert("이미 추가한 포켓몬입니다!");
+      Swal.fire({
+        icon: "error",
+        // title: "Error",
+        html: '<div style="font-size: 30px;">이미 추가한 포켓몬입니다!</div>',
+      });
     } else {
       onAdd(pokemon);
     }
