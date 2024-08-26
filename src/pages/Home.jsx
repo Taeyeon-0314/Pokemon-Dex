@@ -51,7 +51,7 @@ const StSubImg = styled.img`
 
 const StDevBtn = styled.button`
   background-color: #fa4747;
-  width: 200px;
+  width: 210px;
   height: 50px;
   font-size: 20px;
   font-weight: bold;
