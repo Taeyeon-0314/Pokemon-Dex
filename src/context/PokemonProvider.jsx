@@ -14,7 +14,7 @@ export function PokemonProvider({ children }) {
   const addPokemon = (pokemon) => {
     if (selectedPokemon.length >= 6) {
       Swal.fire({
-        html: '<div style="font-size: 25px;">최대 6개의 포켓몬만 선택할 수 있습니다.</div>',
+        html: '<div style="font-size: 24px;">최대 6개의 포켓몬만 선택할 수 있습니다.</div>',
       });
       return;
     }
